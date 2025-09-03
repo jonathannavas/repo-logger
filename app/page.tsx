@@ -1,8 +1,6 @@
 
 // import logger from "./utils/logger";
 
-export const runtime = "edge"
-
 export default function Home() {
   // logger.debug('-------')
   // logger.info(`Request de info`);
