@@ -1,7 +1,18 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import logger from "./utils/logger";
 
 export default function Home() {
+  logger.debug('-------')
+  logger.info(`Request de info`);
+  logger.error("Request de fallo")
+  logger.debug('-------')
+  logger.warn("Request de warning")
+  logger.debug('-------')
+  logger.fatal("Request de fatal")
+  logger.debug('-------')
+  logger.trace("Request de trace")
+  logger.debug('-------')
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -15,9 +26,9 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>app/page.tsx</code>.
+            Título<code>app/page.tsx</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>Pruebas hot reload.</li>
         </ol>
 
         <div className={styles.ctas}>
