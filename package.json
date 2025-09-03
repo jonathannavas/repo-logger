@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "pages:build": "npx @cloudflare/next-on-pages"
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "build": "next build --turbopack && opennextjs-cloudflare build",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "next": "15.5.2",
@@ -18,14 +19,12 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@opennextjs/cloudflare": "^1.7.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "typescript": "^5",
-    "vercel": "^47.0.3",
-    "wrangler": "^4.33.2"
+    "vercel": "^47.0.3"
   }
 }
