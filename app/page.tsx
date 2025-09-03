@@ -1,18 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import logger from "./utils/logger";
+// import logger from "./utils/logger";
+
+export const runtime = "edge"
 
 export default function Home() {
-  logger.debug('-------')
-  logger.info(`Request de info`);
-  logger.error("Request de fallo")
-  logger.debug('-------')
-  logger.warn("Request de warning")
-  logger.debug('-------')
-  logger.fatal("Request de fatal")
-  logger.debug('-------')
-  logger.trace("Request de trace")
-  logger.debug('-------')
+  // logger.debug('-------')
+  // logger.info(`Request de info`);
+  // logger.error("Request de fallo")
+  // logger.debug('-------')
+  // logger.warn("Request de warning")
+  // logger.debug('-------')
+  // logger.fatal("Request de fatal")
+  // logger.debug('-------')
+  // logger.trace("Request de trace")
+  // logger.debug('-------')
   return (
     <div className={styles.page}>
       <main className={styles.main}>
